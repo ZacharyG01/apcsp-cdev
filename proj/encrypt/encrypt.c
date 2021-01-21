@@ -14,23 +14,23 @@ int CHARS_LEN = 62;
 
 char shiftChar(char c, int shift, int direction)
 {
-  for (int i = 0; i < CHARS_LEN; i++) { 
+  for (int i = 0; i < CHARS_LEN; i++) {
     if (CHARS[i] == c) {
-
-     
        if (direction == 1) {
- 
+
           if (i + shift >= 62) {
-          shift = shift - 62;
+            shift = shift - 62;
           }
 
          c = CHARS[i+shift];
          return c;
        }
        else if (direction == 0) {
-         if (i - shift < 0) { 
+
+         if (i - shift < 0) {
            shift = shift - 62;
          }
+
         c = CHARS[i-shift];
         return c;
        }
