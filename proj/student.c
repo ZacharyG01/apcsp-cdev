@@ -39,9 +39,9 @@ void createStudent(char* fname, char* lname, int age, int id)
 void deleteStudent(Student* student)
 {
  if (student != 0) {
-  free(student);
   free(student->firstName);
   free(student->lastName);
+  free(student);
   student = 0;
 }
 
